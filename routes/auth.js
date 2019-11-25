@@ -2,11 +2,17 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
+const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
+//perfil-------
+router.get("/profile", ensureLoggedIn('/auth/login'), (req, res)=>{
+
+  res.render("auth/profile", {user:req.user})
+})
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { "message": req.flash("error") });
@@ -26,12 +32,13 @@ router.get("/signup", (req, res, next) => {
 router.post("/signup", (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
+  console.log(req.body)
   if (username === "" || password === "") {
     res.render("auth/signup", { message: "Indicate username and password" });
     return;
   }
 
-  User.findOne({ username }, "username", (err, user) => {
+  User.findOne({ username }, (err, user) => {
     if (user !== null) {
       res.render("auth/signup", { message: "The username already exists" });
       return;
@@ -40,15 +47,10 @@ router.post("/signup", (req, res, next) => {
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
 
-    //Avatar
-    const photoName = req.file.url;
-    const photoUrl = req.file.originalname;
-
     const newUser = new User({
       username,
       password: hashPass,
-      photoName,
-      photoUrl
+      email: req.body.email
     });
 
     newUser.save()
