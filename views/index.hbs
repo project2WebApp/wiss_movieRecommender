@@ -1,53 +1,35 @@
-<h1>{{title}}</h1>
-<p>Basic form to check if it works {{title}}</p>
-
-
-{{!-- <form action="/api/getchorizopeliculas" method="POST">
-
-  <label for="genre">Genre</label>
-  <input id="movie-genre" type="text" name="Genre" value="28">
-  <label for="rating">Rating</label>
-  <input id="movie-rating" type="number" min="0" max="10" name="Rating" value="8">
-  <select id="movie-Tv" name="MovieTVshow">
-    <option value="movie">Movie</option>
-    <option value="tv">TV Show</option>
-    <input  id="movieForm" type="submit" value="Submit">
-  </select>
-</form>
-<div id = "printData">
-  
-</div> --}}
 
 <div class="form-style">
 <form action="/api/getchorizopeliculas" method="POST">
   <label for="serie/movie">¿Serie o película?</label>
-  <select class="form1" id="serie/movie" name="serie/movie">¿Serie o película?
-    <option value="1">Pelicula</option>
-    <option value="2">Serie</option>
+  <select class="form1" id="movie-Tv" name="movie-Tv">¿Serie o película?
+    <option value="movie">Pelicula</option>
+    <option value="tv">Serie</option>
   </select>
   <label for="queTeApetece">¿Qué te apetece?</label>
-  <select class = "form1" id="queTeApetece" name="queTeApetece">¿Qué te apetece?
-    <option value="1">Reir</option>
-    <option value="2">Pasar el rato</option>
-    <option value="3">Indignarme</option>
-    <option value="4">Emocionarme</option>
-    <option value="5">Un poco de historia</option>
-    <option value="6">Algo inquietante</option>
+  <select class = "form1" id="genre" name="genre">¿Qué te apetece?
+    <option value="reir">Reir</option>
+    <option value="pasarRato">Pasar el rato</option>
+    <option value="indignarme">Indignarme</option>
+    <option value="emocion">Emocionarme</option>
+    <option value="historia">Un poco de historia</option>
+    <option value="inquietante">Algo inquietante</option>
   </select>
   <label for="epoca">¿Qué época?</label>
-  <select class = "form1" id="epoca"name="epoca" >¿De qué epoca?
-    <option value="1">Clásica</option>
-    <option value="2">Moderna</option>
-    <option value="3">Actual</option>
+  <select class = "form1" id="year"name="epoca" >¿De qué epoca?
+    <option value="classic">Clásica</option>
+    <option value="modern">Moderna</option>
+    <option value="current">Actual</option>
   </select>
   <label for="rating">¿Como de buena?</label>
   <select class="form1" id="rating" name="rating" >
-    <option value="1">Bodrio</option>
-    <option value="2">Normalita</option>
-    <option value="3">Peliculón</option>
+    <option value="mala">Bodrio</option>
+    <option value="normal">Normalita</option>
+    <option value="top">Peliculón</option>
       </select>
        <input class="input-btn" id="movieForm" type="submit" value="Submit">
 </form>
-<div id="printData"></div>
+
 </div>
+<div id="printData"></div>
 
