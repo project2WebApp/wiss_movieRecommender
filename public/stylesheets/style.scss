@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+.nav-bar {
+  width: 100vw;
+  padding: 40px;
+  background-color: #16192d;
+}
+
+.footer {
+  widows: 100vw;
+  height: 200px;
+  background-color: #16192d;
+}
+
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  
+  color: white;
+}
