@@ -5,12 +5,15 @@
 <form action="/api/getchorizopeliculas" method="POST">
 
   <label for="genre">Genre</label>
-  <input type="text" name="Genre" value="Action">
+  <input id="movie-genre" type="text" name="Genre" value="28">
   <label for="rating">Rating</label>
-  <input type="number" name="Rating" value="8">
-  <select name="MovieTVshow">
+  <input id="movie-rating" type="number" name="Rating" value="8">
+  <select id="movie-Tv" name="MovieTVshow">
     <option value="1">Movie</option>
     <option value="2">TV Show</option>
-    <input type="submit" value="Submit">
+    <input  id="movieForm" type="submit" value="Submit">
   </select>
 </form>
+<div id = "printData">
+  
+</div>
