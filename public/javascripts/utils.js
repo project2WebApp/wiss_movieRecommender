@@ -2,7 +2,7 @@ function getValueForm() {
   const selMovieOrTv = document.querySelector("#movie-Tv").value;
   const selGenre = transformGenre(document.querySelector("#genre").value);
   const selYear = setYear(document.querySelector("#year").value);
-  const selRate = document.querySelector("#rating").value;
+  const selRate = setRate(document.querySelector("#rating").value);
 
   let apiUrl = `https://api.themoviedb.org/3/discover/${selMovieOrTv}?api_key=80be352c5e3bd7b6c67144ebff351283&include_adult=false&release_date.${selYear}&vote_average.${selRate}&with_genres=${selGenre}`;
   return apiUrl
@@ -12,13 +12,13 @@ function setRate(data) {
   let setRate = "";
   switch (data) {
     case "mala":
-      setRate = `lte=1970`;
+      setRate = `lte=6`;
       break;
     case "normal":
-      setRate = `gte=6&vote_average.lte=7`;
+      setRate = `gte=6&vote_average.lte=8`;
       break;
     case "top":
-      setRate = `gte=2001`;
+      setRate = `gte=8`;
       break;
   }
   return setRate;
