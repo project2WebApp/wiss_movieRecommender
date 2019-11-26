@@ -1,15 +1,97 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+html,
+ body,
+ div,
+ span,
+ object,
+ iframe,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ abbr,
+ address,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ ins,
+ kbd,
+ q,
+ samp,
+ small,
+ strong,
+ sub,
+ sup,
+ var,
+ b,
+ i,
+ dl,
+ dt,
+ dd,
+ ol,
+ ul,
+ li,
+ fieldset,
+ form,
+ label,
+ legend,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td,
+ article,
+ aside,
+ canvas,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ menu,
+ nav,
+ section,
+ summary,
+ time,
+ mark,
+ audio,
+ video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+ }
+
 
 a {
-  color: #00B7FF;
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+.nav-bar-container{
+  width: 100vw;
 }
 
 .nav-bar {
+  display: flex;
+  justify-content:space-between;
   width: 100vw;
-  padding: 40px;
+  padding: 40px 0px;
   background-color: #16192d;
 }
 
@@ -26,7 +108,108 @@ a {
   align-items: center;
 }
 
-h3 {
-  
+h3 {  
   color: white;
 }
+
+.loginIcon {
+  display: flex;
+  align-items: center;  
+
+}
+.loginIcon img{
+margin-right: 100px;
+width: 70px;
+height: 70px;
+}
+
+h2 {
+  
+  font-size: 47px;
+  color: #fc5c4c;
+}
+
+.home {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.movieFinder {
+  background-color: #fc5c4c;
+  width: 600px;
+  height: 100px;
+  margin-right: 500px;
+  margin-bottom: 200px;
+  padding: 40px;
+}
+
+.crop {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100vw;
+  height: 1000px;
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/dexfqvxax/image/upload/v1574768391/sources/ironman3_wzt4oq.png");
+} 
+
+.text-presentation {
+  margin-bottom: 20px;
+  margin-right: 500px;
+  height: 300px;
+  width: 700px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+.text-presentation p{
+  margin: 20px;
+  padding: 10px;
+  font-size: 27px;
+  color: white;
+} 
+
+span {
+  font-size: 22px;
+  color: white;
+}
+
+
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container{
+display: flex;
+justify-content: center;
+  
+}
+.footer-info {
+  margin-top: 100px;
+  font-size: 25px;
+}
+
+.input-btn {
+  height: 50px;
+  width: 200px;
+}
+
+.form1 {
+  width: 200px;
+  height: 50px;
+}
+
+.form-style {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+
+
