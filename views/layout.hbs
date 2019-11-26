@@ -7,106 +7,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  <style>
-    html,
-    body,
-    div,
-    span,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    abbr,
-    address,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    samp,
-    small,
-    strong,
-    sub,
-    sup,
-    var,
-    b,
-    i,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-  </style>
+
 
 </head>
 
 <body>
+  <div class="nav-bar-container">
+    <nav class="nav-bar">
+      <div class="home">
+        <h2>Wiss Movie Recomendator</h2>
+        <a href="/">Home</a>
+        <a href="/auth/profile">Profile</a>
+      </div>
+      <div class="loginIcon">
+        <a href="/auth/logout">Logout</a>
+        <a href="/auth/login">Login</a>
+        <img class="loginIcon"
+          src="https://res.cloudinary.com/dexfqvxax/image/upload/v1574763513/sources/login_icon_jwepvv.svg"
+          alt="login-icon">
+        <a href="/auth/signup">Signup</a>
+      </div>
 
-  <nav class="nav-bar">
+    </nav>
     <div>
-      <a href="/">Home</a>
-      <a href="/auth/profile">Profile</a>
-      <a href="/auth/logout">Logout</a>
-    </div>
-    <div>
-      <a href="/auth/login">Login</a>
-      <a href="/auth/signup">Signup</a>
-    </div>
-  </nav>
 
-  {{{body}}}
-  
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/javascripts/script.js"></script>
+      {{{body}}}
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="/javascripts/script.js"></script>
 </body>
 <footer class="footer">
   <div class="footer-container">
