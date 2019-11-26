@@ -2,7 +2,6 @@
 document.getElementById("movieForm").onclick = function(event) {
   event.preventDefault();
   
-  
   axios
   .get(getValueForm())
   .then(responseFromAPI => {
@@ -12,5 +11,3 @@ document.getElementById("movieForm").onclick = function(event) {
     console.log("Error while getting the data: ", err);
   });
 };
-
-
