@@ -6,7 +6,7 @@ const movieSchema = new Schema({
   voteAverage:Number,
   title:      String,
   genre:      String,
-  releaseDate:Number,
+  releaseDate:String,
   imgPath:    String
 
 

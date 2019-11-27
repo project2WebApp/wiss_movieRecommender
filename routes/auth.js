@@ -88,10 +88,10 @@ router.post("/create-movie", (req, res) => {
 }
 
   Movie.create(movie)
-  .then(createdMovie=> User.findByIdAndUpdate((req.params._id),{$push:{listWatchLater: createdMovie._id}},{new: true}))
-  .then(() => {
-    res.redirect("/profile")
-  })  
+  .then(createdMovie=> User.findByIdAndUpdate((req.user._id),{$push:{listWatchLater: createdMovie._id}}))
+  .then(() =>{
+    res.redirect("/auth/profile")
+  })
   .catch(err=>console.log(err))
   
 
