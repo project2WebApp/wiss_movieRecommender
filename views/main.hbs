@@ -1,34 +1,63 @@
 <div>
-  <div id="1" class="card-container hidden">
+  <div id="1-card" class="card-container">
     <div id="movie-tv-cards" class="cards">
       <div id="movie-card" class="card" name="movie">Movie</div>
       <div id="tv-card" class="card" name="tv">Tv</div>
     </div>
   </div>
-  <div id="2" class="card-container max">
+  <div id="2-card" class="card-container max hidden">
     <div id="genre-cards" class="cards">
       <div id="reir-card" class="card" name="reir">Reir</div>
       <div id="pasarRato-card" class="card" name="pasarRato">Pasar el rato</div>
       <div id="indignarme-card" class="card" name="indignarme">indignarme</div>
-    <div id="genre-cards" class="cards">
-      <div id="llorar-card" class="card" name="emocion">Llorar</div>
-      <div id="historia-card" class="card" name="historia">Historia</div>
-      <div id="inquietarme-card" class="card" name="inquietarme">Inquietarme</div>
+      <div id="genre-cards" class="cards">
+        <div id="emocion-card" class="card" name="emocion">Llorar</div>
+        <div id="historia-card" class="card" name="historia">Historia</div>
+        <div id="inquietarme-card" class="card" name="inquietarme">Inquietarme</div>
+      </div>
     </div>
   </div>
-</div>
-<div id="3" class="card-container hidden">
-  <div id="year-cards" class="cards">
-    <div id="movie" class="card">Movie</div>
-    <div id="tv" class="card">Tv</div>
+  <div id="3-card" class="card-container hidden">
+    <div id="year-cards" class="cards">
+      <div id="classic-card" class="card" name="classic">Clasica</div>
+      <div id="modern-card" class="card" name="modern">Contemporanea</div>
+      <div id="current-card" class="card" name="current">Actual</div>
+    </div>
   </div>
-</div>
-<div id="4" class="card-container hidden">
-  <div id="rating-cards" class="cards">
-    <div id="movie" class="card">Movie</div>
-    <div id="tv" class="card">Tv</div>
+  <div id="4-card" class="card-container hidden">
+    <div id="rating-cards" class="cards">
+      <div id="mala-card" class="card" name="mala">Bodrio</div>
+      <div id="normal-card" class="card" name="normal">Normalilla</div>
+      <div id="top-card" class="card" name="top">La Ostia</div>
+    </div>
   </div>
-</div>
+  <form id="printMovie" action="/create-movie" method="POST" class="hidden">
+  <div>
+    <div class="">
+      <div>
+       <input id="img-form" type="text" name="imgPath" value =>
+      </div>
+      <div>
+        <input id="title-form" type="text" name="title" value =>
+        <input id="year-form" type="text" name="releaseDate" value =>
+        <input type="submit" value="Watch Later"> 
+        <button>FAV</button>
+      </div>
+      <div>
+        <div>
+          <P>OVERVIEW</P>
+          <P>LORERERERERERERERR</P>
+        </div>
+        <div>
+          <input id="genre-form" type="text" name="genre" value =>
+         <input id="rate-form" type="text" name="voteAverage" value =>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </form>
+
 
 
 

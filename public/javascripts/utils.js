@@ -1,12 +1,3 @@
-function getValueForm() {
-  const selMovieOrTv = document.querySelector("#movie-Tv").value;
-  const selGenre = transformGenre(document.querySelector("#genre").value);
-  const selYear = setYear(document.querySelector("#year").value);
-  const selRate = setRate (document.querySelector("#rating").value);
-
-  let apiUrl = `https://api.themoviedb.org/3/discover/${selMovieOrTv}?api_key=80be352c5e3bd7b6c67144ebff351283&include_adult=false&release_date.${selYear}&vote_average.${selRate}&with_genres=${selGenre}`;
-  return apiUrl
-}
 
 function setRate(data) {
   let setRate = "";
@@ -21,7 +12,6 @@ function setRate(data) {
       setRate = `gte=8`;
       break;
   }
-  console.log(setRate)
   return setRate;
   
 }
@@ -71,9 +61,13 @@ function printMovieOrTv(oneMovie) {
   if (movieName === undefined) movieName = oneMovie.name;
   if (movieYear === undefined) movieYear = oneMovie.first_air_date
 
-  let divStart = (document.querySelector(
-    "#printData"
-).innerHTML = `<div>Nombre: ${movieName}</div><div>Genre: ${movieGenre}</div><div>Date: ${movieYear}<div>Rate: ${movieRate}</div><img class="img-prueba" src=${movieImg}>`);
+  document.querySelector("#title-form").value = movieName
+  document.querySelector("#genre-form").value = movieGenre
+  document.querySelector("#year-form").value = movieYear
+  document.querySelector("#rate-form").value = movieRate
+  document.querySelector("#img-form").value = movieImg
+
+
 }
 
 function convertGenre(genreID) {

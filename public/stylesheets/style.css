@@ -186,15 +186,22 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: #fc5c4c;
   width: 20vw;
   height: 20vh;
   border-radius: 10px;
   margin-bottom: 5vw;
   margin-right: 5vw;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
-  color: whitesmoke; }
+  color: whitesmoke;
+  transition: 0.2s; }
+
+.card:hover {
+  background: whitesmoke;
+  color: #fc5c4c;
+  border: 2px solid #fc5c4c;
+  box-sizing: border-box; }
 
 .hidden {
   display: none; }
@@ -226,7 +233,6 @@ span {
   align-items: flex-start;
   margin-top: 100px; }
 
-<<<<<<< HEAD
 .slack-login {
   text-decoration: underline;
   color: blue; }
@@ -234,9 +240,8 @@ span {
 .google-login {
   text-decoration: underline;
   color: blue; }
-=======
+
 .img-prueba {
   width: 100px; }
->>>>>>> cbdbfb2446f4bdbae89bc72b068169c01ab21362
 
 /*# sourceMappingURL=style.css.map */
