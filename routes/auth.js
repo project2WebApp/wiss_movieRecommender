@@ -68,4 +68,42 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+
+// Slack social login
+
+
+router.get("/auth/slack", passport.authenticate("slack"));
+router.get(
+  "/auth/slack/callback",
+  passport.authenticate("slack", {
+    successRedirect: "/private-page",
+    failureRedirect: "/" // here you would navigate to the classic login page
+  })
+);
+
+
+//Google social login
+
+router.get(
+  "/google",
+  passport.authenticate("google", {
+    scope: [
+      "https://www.googleapis.com/auth/userinfo.profile",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  })
+);
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    successRedirect: "/profile",
+    failureRedirect: "/" // here you would redirect to the login page using traditional login approach
+  })
+);
+
 module.exports = router;
+
+
+
+
+
