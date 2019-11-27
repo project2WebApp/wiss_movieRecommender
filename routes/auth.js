@@ -80,19 +80,20 @@ router.get("/logout", (req, res) => {
 
 router.post("/create-movie", (req, res) => {
  const movie = {
-
-
   title : req.body.title,
   genre : req.body.genre,
   releaseDate : req.body.releaseDate,
   imgPath : req.body.imgPath,
   voteAverage : req.body.voteAverage,
-
 }
 
   Movie.create(movie)
-  .then(createdMovie=> User.findByIdAndUpdate((req.user._id),{$set:{listFavs : createdMovie._id}}))
+  .then(createdMovie=> User.findByIdAndUpdate((req.params._id),{$push:{listWatchLater: createdMovie._id}},{new: true}))
+  .then(() => {
+    res.redirect("/profile")
+  })  
   .catch(err=>console.log(err))
+  
 
   
 });
