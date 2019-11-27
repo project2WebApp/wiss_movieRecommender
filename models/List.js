@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const listSchema = new Schema({
-  userId: Number,
-  favs: [String],
-  toWatchList: [String],
-  discard: [String],
+  userId: (req.user._id),
+  // ListFavs: [String],
+  // ListWatchLater: [String],
+  // ListDiscard: [String],
 
 }, {
   timestamps: {

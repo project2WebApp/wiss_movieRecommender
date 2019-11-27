@@ -141,8 +141,15 @@ passport.use(
             done(null, user);
             return;
           }
+          const newUser = {
+            googleID: profile.id,
+            email: profile.emails[0].value,
+            username: profile.displayName,
+            photoUrl: profile.photos[0].value,
+        
+          }
 
-          User.create({ googleID: profile.id })
+          User.create(newUser)
             .then(newUser => {
               done(null, newUser);
             })
