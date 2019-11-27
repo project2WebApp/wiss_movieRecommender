@@ -21,13 +21,13 @@ function setYear(data) {
 
   switch (data) {
     case "classic":
-      setYear = `lte=1970`;
+      setYear = `lte=1985`;
       break;
     case "modern":
-      setYear = `gte=1971&release_date.lte=2000`;
+      setYear = `gte=1985&release_date.lte=2009`;
       break;
     case "current":
-      setYear = `gte=2001`;
+      setYear = `gte=2009`;
       break;
   }
   return setYear;
