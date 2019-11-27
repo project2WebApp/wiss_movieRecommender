@@ -18,7 +18,7 @@ const SlackStrategy = require("passport-slack").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 mongoose
-  .connect('mongodb://localhost/wiss-movierecommender', {useNewUrlParser: true})
+  .connect(`${process.env.DB}`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -67,7 +67,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'WISS';
 
 
 // Enable authentication using session + passport
