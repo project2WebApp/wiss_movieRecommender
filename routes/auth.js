@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
+const Movie = require("../models/Movies");
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 // Bcrypt to encrypt passwords
@@ -54,7 +55,15 @@ router.post("/signup", (req, res, next) => {
     });
 
     newUser.save()
-    .then(() => {
+    .then(justCreatedUser => {
+      const newList = {
+        createdBy : justCreatedUser._id,
+      
+      }
+      List.create(newList)
+      .then(()=>{
+        
+      })
       res.redirect("/");
     })
     .catch(err => {
@@ -69,6 +78,27 @@ router.get("/logout", (req, res) => {
 });
 
 
+router.post("/create-movie", (req, res) => {
+ const movie = {
+
+
+  title : req.body.title,
+  genre : req.body.genre,
+  releaseDate : req.body.releaseDate,
+  imgPath : req.body.imgPath,
+  voteAverage : req.body.voteAverage,
+
+}
+
+  Movie.create(movie)
+  .then(createdMovie=> User.findByIdAndUpdate((req.user._id),{$set:{listFavs : createdMovie._id}}))
+  .catch(err=>console.log(err))
+
+  
+});
+
+
+
 // Slack social login
 
 
@@ -76,8 +106,8 @@ router.get("/auth/slack", passport.authenticate("slack"));
 router.get(
   "/auth/slack/callback",
   passport.authenticate("slack", {
-    successRedirect: "/private-page",
-    failureRedirect: "/" // here you would navigate to the classic login page
+    successRedirect: "/",
+    failureRedirect: "/profile" // here you would navigate to the classic login page
   })
 );
 
@@ -96,8 +126,8 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/profile",
-    failureRedirect: "/" // here you would redirect to the login page using traditional login approach
+    successRedirect: "/",
+    failureRedirect: "/profile" // here you would redirect to the login page using traditional login approach
   })
 );
 

@@ -7,6 +7,9 @@ const userSchema = new Schema({
   email: String,
   slackID: String,
   googleID: String,
+  listFavs: [{type: Schema.Types.ObjectId, ref:"Movies"}],
+  listWatchLater: [{type: Schema.Types.ObjectId, ref:"Movies"}],
+  listDiscard: [{type: Schema.Types.ObjectId, ref:"Movies"}],
   photoName: {type: String, default: "defualt"},
   photoUrl: {type: String, default: "https://cdn3.f-cdn.com/contestentries/1269942/15600440/5a991c82be987_thumb900.jpg"}
 }, {
@@ -17,4 +20,5 @@ const userSchema = new Schema({
 });
 
 const User = mongoose.model('User', userSchema);
+
 module.exports = User;
