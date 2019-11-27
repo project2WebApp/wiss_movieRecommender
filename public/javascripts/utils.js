@@ -65,13 +65,15 @@ function printMovieOrTv(oneMovie) {
   let movieRate = oneMovie.vote_average;
   let movieGenre = convertGenre(oneMovie.genre_ids);
   let movieYear = oneMovie.release_date
+  let movieImg = `https://image.tmdb.org/t/p/w500${oneMovie.poster_path}`
+
 
   if (movieName === undefined) movieName = oneMovie.name;
   if (movieYear === undefined) movieYear = oneMovie.first_air_date
 
   let divStart = (document.querySelector(
     "#printData"
-).innerHTML = `<div>Nombre: ${movieName}</div><div>Genre: ${movieGenre}</div><div>Date: ${movieYear}<div>Rate: ${movieRate}</div>`);
+).innerHTML = `<div>Nombre: ${movieName}</div><div>Genre: ${movieGenre}</div><div>Date: ${movieYear}<div>Rate: ${movieRate}</div><img class="img-prueba" src=${movieImg}>`);
 }
 
 function convertGenre(genreID) {

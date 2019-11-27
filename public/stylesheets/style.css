@@ -89,7 +89,15 @@ a {
   justify-content: space-between;
   width: 100vw;
   padding: 40px 0px;
-  background-color: #16192d; }
+  background-color: #16192d;
+  height: 5vh; }
+
+#logo {
+  display: flex;
+  flex-direction: column; }
+
+#logo span {
+  font-size: 15px; }
 
 .footer {
   widows: 100vw;
@@ -158,6 +166,39 @@ span {
   font-size: 22px;
   color: white; }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  height: 90vh;
+  width: 100vw; }
+
+.max {
+  flex-direction: column; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20vw;
+  height: 20vh;
+  border-radius: 10px;
+  margin-bottom: 5vw;
+  margin-right: 5vw;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke; }
+
+.hidden {
+  display: none; }
+
 .footer {
   width: 100vw;
   display: flex;
@@ -180,10 +221,12 @@ span {
   height: 50px; }
 
 .form-style {
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 100px; }
+
+.img-prueba {
+  width: 100px; }
 
 /*# sourceMappingURL=style.css.map */
