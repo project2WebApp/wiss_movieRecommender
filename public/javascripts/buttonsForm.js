@@ -11,3 +11,4 @@ favBtn.onclick = function(){
 discBtn.onclick = function(){
   document.querySelector("#printMovie").action = "/movie/create-movie-disc-list"
 }
+

@@ -1,9 +1,23 @@
 
-<h1 class="my-list">My list</h1>
-<h2 class="user-name">{{user.username}}</h2>
-
+<div>
+  <button id="btn-later">Watch Later</button>
+  <button id="btn-fav">My Fav's</button>
+</div>
+<div id="mylist-later" class="">
 {{#each user.listWatchLater}}
 
-<img src="{{imgPath}}" alt="foto pelicula">
+<img class = "mylist-img" src="{{imgPath}}" alt="foto pelicula">
+
 
 {{/each}}
+</div>
+<div id="mylist-fav" class="hidden">
+{{#each user.listFavs}}
+
+<img class = "mylist-img" src="{{imgPath}}" alt="foto pelicula">
+
+{{/each}}
+</div>
+
+
+
