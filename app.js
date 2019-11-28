@@ -14,7 +14,6 @@ const User = require("./models/User");
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
-const SlackStrategy = require("passport-slack").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 mongoose
@@ -91,44 +90,13 @@ const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes)
 
 
-// Slack social login
-
-passport.use(
-  new SlackStrategy(
-    {
-      clientID: "2432150752.849865422644",
-      clientSecret: "facabe4d0eb5a17fc4c4edb7ccc81649",
-      callbackURL: "/auth/slack/callback"
-    },
-    (accessToken, refreshToken, profile, done) => {
-      // to see the structure of the data in received response:
-      console.log("Slack account details:", profile);
-
-      User.findOne({ slackID: profile.id })
-        .then(user => {
-          if (user) {
-            done(null, user);
-            return;
-          }
-
-          User.create({ slackID: profile.id })
-            .then(newUser => {
-              done(null, newUser);
-            })
-            .catch(err => done(err)); // closes User.create()
-        })
-        .catch(err => done(err)); // closes User.findOne()
-    }
-  )
-);
-
 //Google social login
 
 passport.use(
   new GoogleStrategy(
     {
-      clientID: "155243145782-jf679hld9pi417i3pg8d7dk3vi1roprc.apps.googleusercontent.com",
-      clientSecret: "7ipllTn26OtjLzauOVCq5ULt",
+      clientID: `${process.env.GOOGLE_ID_CLIENT}`,
+      clientSecret: `${process.env.GOOGLE_SECRET}`,
       callbackURL: "/auth/google/callback"
     },
     (accessToken, refreshToken, profile, done) => {

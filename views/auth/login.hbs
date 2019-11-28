@@ -17,7 +17,7 @@
   <br><br>
 
   <button>Login</button>
-  <a class = "slack-login" href="/auth/slack">Login With Slack</a>
+  
 
   <p class="account-message">
     Don't have an account yet?
@@ -27,6 +27,8 @@
 {{#unless user}}
   Home page
   <div>
-    <a class = "google-login" href="/auth/google">Login With Google</a>
+    <button >
+    <a href="/auth/google">Login With Google</a>
+    </button>
   </div>
 {{/unless}}
