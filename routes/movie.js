@@ -108,6 +108,7 @@ router.post("/delete-movie-disc-list", (req, res) => {
 router.get("/mylist", (req, res) => {
   User.findById(req.user._id)
   .populate("listWatchLater")
+  .populate("listFavs")
   .then((foundUser) => {
     console.log(foundUser);
     res.render("mylist", {user: foundUser})

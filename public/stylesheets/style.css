@@ -317,4 +317,8 @@ span {
 .hidden {
   display: none; }
 
+.mylist-img {
+  width: 250px;
+  margin-left: 30px; }
+
 /*# sourceMappingURL=style.css.map */
