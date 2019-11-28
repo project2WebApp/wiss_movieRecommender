@@ -21,12 +21,20 @@
         <a href="/movie/mylist">My List</a>
       </div>
       <div class="loginIcon">
+        {{#if user}}
+        <h3 id="navBar-username">{{user.username}}</h3>
+        <img class="loginIcon-user"
+          src={{user.photoUrl}}
+          alt="login-icon">
+        <a href="/auth/logout">Logout</a>
+        {{else}}
         <a href="/auth/logout">Logout</a>
         <a href="/auth/login">Login</a>
         <a href="/auth/signup">Signup</a>
         <img class="loginIcon"
           src="https://res.cloudinary.com/dexfqvxax/image/upload/v1574763513/sources/login_icon_jwepvv.svg"
           alt="login-icon">
+        {{/if}}
       </div>
     </nav>
   </div>

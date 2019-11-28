@@ -121,7 +121,8 @@ h3 {
 .loginIcon img {
   margin-right: 100px;
   width: 70px;
-  height: 70px; }
+  height: 70px;
+  border-radius: 50%; }
 
 h2 {
   font-size: 47px;
@@ -205,10 +206,6 @@ span {
   border: 2px solid #fc5c4c;
   box-sizing: border-box; }
 
-.hidden {
-  display: none;
-  transition: 5s; }
-
 #reveal-movie-container {
   display: flex;
   justify-content: center;
@@ -216,6 +213,9 @@ span {
   background: rgba(0, 0, 0, 0.9);
   width: 100vw;
   height: 85vh; }
+
+#reveal-movie-container.hidden {
+  display: none; }
 
 #reveal-movie-cover {
   height: 60vh;
@@ -313,5 +313,8 @@ span {
 
 .user-name {
   font-size: 20px; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
