@@ -3,7 +3,7 @@ function go() {
   axios
   .get(getValueForm())
   .then(responseFromAPI => {
-    printMovieOrTv(randomMovieOrTv(responseFromAPI.data))
+    printMovieOrTvForm(randomMovieOrTv(responseFromAPI.data))
     console.log(responseFromAPI)
   })
   .catch(err => {

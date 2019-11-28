@@ -99,7 +99,7 @@ document.getElementById("mala-card").onclick = function(event) {
   event.preventDefault();
   rate = setRate("mala")
   document.getElementById("4-card").className = "card-container hidden"
-  document.getElementById("printMovie").className = "printMovie"
+  document.getElementById("reveal-movie-container").className = ""
   go()
   console.log(movieOrTv)
   console.log(genre)
@@ -110,7 +110,7 @@ document.getElementById("normal-card").onclick = function(event) {
   event.preventDefault();
   rate = setRate("normal")
   document.getElementById("4-card").className = "card-container hidden"
-  document.getElementById("printMovie").className = "printMovie"
+  document.getElementById("reveal-movie-container").className = ""
   go()
   console.log(movieOrTv)
   console.log(genre)
@@ -121,7 +121,7 @@ document.getElementById("top-card").onclick = function(event) {
   event.preventDefault();
   rate = setRate("top")
   document.getElementById("4-card").className = "card-container hidden"
-  document.getElementById("printMovie").className = "printMovie"
+  document.getElementById("reveal-movie-container").className = ""
   go()
   console.log(movieOrTv)
   console.log(genre)

@@ -50,7 +50,7 @@ function transformGenre(data) {
   }
 }
 
-function printMovieOrTv(oneMovie) {
+function printMovieOrTvForm(oneMovie) {
   let movieName = oneMovie.title;
   let movieRate = oneMovie.vote_average;
   let movieGenre = convertGenre(oneMovie.genre_ids);
@@ -66,10 +66,32 @@ function printMovieOrTv(oneMovie) {
   document.querySelector("#year-form").value = movieYear
   document.querySelector("#rate-form").value = movieRate
   document.querySelector("#img-form").value = movieImg
-
+  printMovieOrTvReveal(oneMovie)
 
 }
+function printMovieOrTvReveal(oneMovie) {
+  let movieName = oneMovie.title;
+  let movieRate = oneMovie.vote_average;
+  let movieGenre = convertGenre(oneMovie.genre_ids);
+  let movieYear = oneMovie.release_date
+  let movieOverview = oneMovie.overview
+  let movieImg = `https://image.tmdb.org/t/p/w780${oneMovie.poster_path}`
+  let backImg = `https://image.tmdb.org/t/p/w1280${oneMovie.backdrop_path}`
+  console.log(oneMovie)
 
+  if (movieName === undefined) movieName = oneMovie.name;
+  if (movieYear === undefined) movieYear = oneMovie.first_air_date
+
+  document.querySelector("#poster").src = movieImg
+  document.querySelector("#title-movie").innerHTML = movieName
+  document.querySelector("#year-movie").innerHTML = `( ${movieYear.slice(0,4)} )`
+  document.querySelector("#overview-movie").innerHTML = movieOverview
+  document.getElementById("reveal-movie-cover").style.backgroundImage = "url(" + backImg + ")"
+  document.querySelector("#genre-movie").innerHTML = movieGenre
+  document.querySelector("#rate-movie").innerHTML = movieRate
+  
+  
+}
 function convertGenre(genreID) {
   let arr = [];
   genreID.forEach(id => {
