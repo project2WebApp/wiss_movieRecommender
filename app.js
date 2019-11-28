@@ -86,8 +86,8 @@ app.use('/', index);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
-const apiRoutes = require('./routes/api');
-app.use('/api', apiRoutes)
+const movieRoutes = require('./routes/movie');
+app.use('/movie', movieRoutes)
 
 
 //Google social login
