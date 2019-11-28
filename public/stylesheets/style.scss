@@ -1,82 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap");
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  font-family: "Nunito";
-}
+@import "./public/stylesheets/reset";
 
 a {
   margin-right: 15px;
@@ -84,6 +7,8 @@ a {
   color: white;
   text-decoration: none;
 }
+
+// NAVEGATION BAR ---------
 .nav-bar-container {
   width: 100vw;
 }
@@ -106,6 +31,7 @@ a {
   font-size: 15px;
 }
 
+// -----------------------
 .footer {
   widows: 100vw;
   height: 200px;
@@ -130,6 +56,7 @@ h3 {
   margin-right: 100px;
   width: 70px;
   height: 70px;
+  border-radius: 50%;
 }
 
 h2 {
@@ -224,12 +151,6 @@ span {
   box-sizing: border-box;
 }
 //-------------------------
-//SHHHHHHH is here------------
-.hidden {
-  display: none;
-  transition: 5s;
-}
-//-------------------------
 //REVEAL_MOVIE-------------
 #reveal-movie-container {
   display: flex;
@@ -239,7 +160,10 @@ span {
   width: 100vw;
   height: 85vh;
 }
-#reveal-movie-cover{
+#reveal-movie-container.hidden {
+  display: none;
+}
+#reveal-movie-cover {
   height: 60vh;
   width: 80vw;
   border-radius: 5px;
@@ -260,7 +184,6 @@ span {
   width: 30%;
   height: 100%;
   border-radius: 5px;
-  
 }
 #reveal-movie-img img {
   border-radius: 5px;
@@ -284,13 +207,13 @@ span {
   color: white;
   font-size: 40px;
 }
-#overview-movie{
+#overview-movie {
   background: rgba(101, 100, 100, 0.4);
   border-radius: 10px;
   padding: 10px;
-  color:white ;
+  color: white;
 }
-#reveal-other-info{
+#reveal-other-info {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -330,7 +253,6 @@ span {
   margin-top: 100px;
 }
 
-
 .google-login {
   text-decoration: underline;
   color: blue;
@@ -347,3 +269,8 @@ span {
 .user-name {
   font-size: 20px;
 }
+//SHHHHHHH is here------------
+.hidden {
+  display: none;
+}
+//-------------------------

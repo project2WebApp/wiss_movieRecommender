@@ -10,8 +10,8 @@ const userSchema = new Schema({
   listFavs: [{type: Schema.Types.ObjectId, ref:"Movies"}],
   listWatchLater: [{type: Schema.Types.ObjectId, ref:"Movies"}],
   listDiscard: [{type: Schema.Types.ObjectId, ref:"Movies"}],
-  photoName: {type: String, default: "defualt"},
-  photoUrl: {type: String, default: "https://cdn3.f-cdn.com/contestentries/1269942/15600440/5a991c82be987_thumb900.jpg"}
+  photoName: {type: String, default: "user-avatar"},
+  photoUrl: {type: String, default: "https://res.cloudinary.com/dexfqvxax/image/upload/v1574763513/sources/login_icon_jwepvv.svg"}
 }, {
   timestamps: {
     createdAt: 'created_at',
