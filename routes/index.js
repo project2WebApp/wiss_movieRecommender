@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   res.render('index2',{user:req.user});
 });
 router.get('/index', (req, res, next) => {
-  res.render('main');
+  res.render('main',{user:req.user});
 });
 
 module.exports = router;
