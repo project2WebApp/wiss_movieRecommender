@@ -1,34 +1,44 @@
+<div id="login-background">
 
-<h2>Login</h2>
+  <div class="login-container">
+    
+      <h2>Login</h2>
+      <img class="login-icon"
+        src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddcf94cc477b35ffe741ffd/c1a95e94ee128ed4a1b822eac9553dbc/login_icon.svg"
+        alt="">
+      <div class="form-style">
+        <form action="/auth/login" method="POST" id="form-container">
+          <label for="username">Username</label>
+          <input id="username" type="text" name="username" placeholder="JonSnow">
 
-<form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
+          <br><br>
 
-  <br><br>
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" placeholder="Your password">
+          <br>
+          {{#if message }}
+          <div class="error-message">{{ message }}</div>
+          {{/if}}
+          <button>Login</button>
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
 
-  <br><br>
+          <p class="account-message">
+            Don't have an account yet?
+            <a href="/auth/signup">Signup</a>
+          </p>
+          {{#unless user}}
 
-  <button>Login</button>
-  
-
-  <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
-  </p>
-</form>
-{{#unless user}}
-  Home page
-  <div>
-    <button >
-    <a href="/auth/google">Login With Google</a>
-    </button>
+        
+          <button>
+            <a href="/auth/google">Login With Google</a>
+          </button>
+        
+        {{/unless}}
+        </form>
+        
+      </div>
+    
   </div>
-{{/unless}}
+
+  <br><br>
+</div>
