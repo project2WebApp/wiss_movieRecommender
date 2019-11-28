@@ -11,8 +11,14 @@ const bcryptSalt = 10;
 
 //perfil-------
 router.get("/profile", ensureLoggedIn('/auth/login'), (req, res)=>{
+  User.findById(req.user._id)
+  .populate("listWatchLater")
+  .then((foundUser) => {
+    res.render("auth/profile", {user: foundUser})
 
-  res.render("auth/profile", {user:req.user})
+  })
+  .catch(err=>console.log(err))
+
 })
 
 router.get("/login", (req, res, next) => {

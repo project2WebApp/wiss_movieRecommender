@@ -3,11 +3,11 @@ let favBtn =  document.querySelector("#btn-2")
 let discBtn =  document.querySelector("#btn-3")
 
 watchBtn.onclick = function(){
-  document.querySelector("#printMovie").action = "/auth/create-movie-watch-list"
+  document.querySelector("#printMovie").action = "/movie/create-movie-watch-list"
 }
 favBtn.onclick = function(){
-  document.querySelector("#printMovie").action = "/auth/create-movie-fav-list"
+  document.querySelector("#printMovie").action = "/movie/create-movie-fav-list"
 }
 discBtn.onclick = function(){
-  document.querySelector("#printMovie").action = "/auth/create-movie-disc-list"
+  document.querySelector("#printMovie").action = "/movie/create-movie-disc-list"
 }
