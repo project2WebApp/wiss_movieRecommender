@@ -490,7 +490,7 @@ button {
 
 body {
   height: 80vh;
-  background-color: rgba(128, 128, 128, 0.1); }
+  background: #16192D; }
 
 .login-container {
   display: flex;
@@ -518,7 +518,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #16192D; }
+  background-color: #16192D;
+  margin-top: 50px; }
 
 .login-icon {
   width: 100px;
