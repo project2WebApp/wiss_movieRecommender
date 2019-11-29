@@ -243,7 +243,10 @@ span {
   flex-direction: column; }
 
 .form-icon {
-  width: 50px; }
+  width: 70px; }
+
+.two-icon-form {
+  width: 90px; }
 
 .cards {
   display: flex;
@@ -264,12 +267,6 @@ span {
   text-align: center;
   color: whitesmoke;
   transition: 0.2s; }
-
-.card:hover {
-  background: whitesmoke;
-  color: #fc5c4c;
-  border: 2px solid #fc5c4c;
-  box-sizing: border-box; }
 
 #reveal-movie-container {
   display: flex;

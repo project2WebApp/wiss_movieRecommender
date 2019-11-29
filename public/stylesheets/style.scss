@@ -192,7 +192,12 @@ span {
 
 .form-icon {
   
-  width: 50px;
+  width: 70px;
+}
+
+.two-icon-form {
+  
+  width: 90px;
 }
 
 .cards {
@@ -216,12 +221,13 @@ span {
   color: whitesmoke;
   transition: 0.2s;
 }
-.card:hover {
-  background: whitesmoke;
-  color: #fc5c4c;
-  border: 2px solid #fc5c4c;
-  box-sizing: border-box;
-}
+// .card:hover {
+//   transform: 1.1;
+//   background: whitesmoke;
+//   color: #fc5c4c;
+//   border: 2px solid #fc5c4c;
+//   box-sizing: border-box;
+// }
 //-------------------------
 //REVEAL_MOVIE-------------
 #reveal-movie-container {
