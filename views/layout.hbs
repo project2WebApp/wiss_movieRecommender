@@ -15,22 +15,27 @@
   <div class="nav-bar-container">
     <nav class="nav-bar">
       <div class="home">
-        <a href="/"><h2 id="logo">Wiss<span>Movie Recomendator</span></h2></a>
+        <a href="/">
+          <img class="imgLogo" src="images/Wiss_logo.png" alt="WISS-logo">
+        </a>
       </div>
       <div>
-        <a href="/movie/mylist">My List</a>
+
       </div>
       <div class="loginIcon">
         {{#if user}}
-        <h3 id="navBar-username">{{user.username}}</h3>
-        <img class="loginIcon-user"
-          src={{user.photoUrl}}
-          alt="login-icon">
-        <a href="/auth/logout">Logout</a>
+        <h3 id="navBar-username" class="hover-negative">{{user.username}}</h3>
+        <img class="loginIcon-user" src={{user.photoUrl}} alt="login-icon">
+        <div id="pop-up-container" class="pop-container hidden">
+          <div id="pop-up-user" class="pop-up">
+            <a href="/movie/mylist" class="btn-nav btn-nav-hover">My List</a>
+            <br>
+            <a href="/auth/logout" class="btn-nav-logout btn-nav-hover">Logout</a>
+          </div>
+        </div>
         {{else}}
-        <a href="/auth/logout">Logout</a>
-        <a href="/auth/login">Login</a>
-        <a href="/auth/signup">Signup</a>
+        <a href="/auth/login" class="hover-negative">Login</a>
+        <a href="/auth/signup" class="hover-negative">Signup</a>
         <img class="loginIcon"
           src="https://res.cloudinary.com/dexfqvxax/image/upload/v1574763513/sources/login_icon_jwepvv.svg"
           alt="login-icon">

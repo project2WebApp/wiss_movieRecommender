@@ -2,7 +2,10 @@
 @import "./public/stylesheets/reset";
 
 *{
-  box-sizing: content-box;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
 }
 a {
   margin-right: 15px;
@@ -11,9 +14,19 @@ a {
   text-decoration: none;
 }
 
-// NAVEGATION BAR ---------
+// NAVEGATION BAR -----------
 .nav-bar-container {
+  display: flex;
+  align-items: center;
   width: 100vw;
+  height: 10vh;
+  box-sizing: border-box;
+  background-color: rgba($color: #16192d, $alpha: .97);
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  position: fixed; 
+  top: 0;
+  
 }
 
 .nav-bar {
@@ -21,8 +34,41 @@ a {
   justify-content: space-between;
   width: 100vw;
   padding: 40px 0px;
-  background-color: #16192d;
+  
   height: 5vh;
+}
+.imgLogo{
+  width: 13rem
+}
+.pop-container{
+  position: fixed;
+  top: 10vh;
+  bottom:30vh;
+  right:7vw;
+  bottom: 0;
+  z-index: 1;
+  width: 15vw;
+  height: 20vh;
+  border-radius: 10px;
+  background: rgba($color: #000000, $alpha: .8) ;
+
+}
+.pop-up{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.btn-nav{
+  font-size: 2.5rem;
+}
+.btn-nav-logout{
+  font-size: 2rem;
+}
+.btn-nav-hover:hover{
+  color:#fc5c4c;
+  transition: 0.2s;
 }
 
 #logo {
@@ -32,6 +78,20 @@ a {
 
 #logo span {
   font-size: 15px;
+}
+#navBar-username{
+  margin-right: 2vw ;
+  padding: 0.5vw;
+  border-radius: 16px;
+  font-size: 2rem;
+}
+.hover-negative:hover{
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #fc5c4c;
+  color:#fc5c4c;
+  transition: 0.2s;
+ 
 }
 
 // -----------------------
@@ -56,10 +116,12 @@ h3 {
   align-items: center;
 }
 .loginIcon img {
-  margin-right: 100px;
-  width: 70px;
-  height: 70px;
+  margin-right: 2rem;
+  width: 60px;
   border-radius: 50%;
+}
+.loginIcon img:hover {
+ border: 1px solid #fc5c4c
 }
 
 h2 {
@@ -68,10 +130,12 @@ h2 {
 }
 
 .home {
-  margin-left: 40px;
+  display: flex;
+  margin-left: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px
 }
 
 .movieFinder {
@@ -272,7 +336,7 @@ span {
 
 .user-img {
   border-radius: 50%;
-  height: 70px;
+  height: 7rem;
 }
 
 .user-name {
@@ -304,6 +368,7 @@ span {
 .mylist-img:hover {
   // position: relative;
   transform: scale(1.1);
+  transition: 0.2s;
 
   
 }
