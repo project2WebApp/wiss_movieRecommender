@@ -1,10 +1,27 @@
 <div>
   <div id="1-card" class="card-container">
+
     <div id="movie-tv-cards" class="cards">
-      <div id="movie-card" class="card" name="movie">Movie</div>
-      <div id="tv-card" class="card" name="tv">Tv</div>
+
+      <div id="movie-card" class="card" name="movie">
+        <div>
+          <img class="form-icon"
+            src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/3ddd3ae40c18ff9cf75a481541226902/pelicula-icon.svg"
+            alt="">
+          <p>Movie</p>
+        </div>
+      </div>
+    </div>
+    <div id="tv-card" class="card" name="tv">
+      <div>
+        <img class="form-icon"
+          src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/9302bfadffd05f91a36dfa5570751972/serie-icon.svg"
+          alt="">
+        <p>TV</p>
+      </div>
     </div>
   </div>
+
   <div id="2-card" class="card-container max hidden">
     <div id="genre-cards" class="cards">
       <div id="reir-card" class="card" name="reir">Reir</div>
@@ -19,16 +36,58 @@
   </div>
   <div id="3-card" class="card-container hidden">
     <div id="year-cards" class="cards">
-      <div id="classic-card" class="card" name="classic">Clasica</div>
-      <div id="modern-card" class="card" name="modern">Contemporanea</div>
-      <div id="current-card" class="card" name="current">Actual</div>
+      <div id="classic-card" class="card" name="classic">
+        <div>
+          <img class="form-icon"
+            src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/f08b7f11e65bee1830c5cf7dcbdd0abc/clasica-icon.svg"
+            alt="">
+          <p>Clasica</p>
+        </div>
+      </div>
+    </div>
+    <div id="modern-card" class="card" name="modern">
+      <div>
+        <img class="form-icon"
+          src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/f08b7f11e65bee1830c5cf7dcbdd0abc/clasica-icon.svg"
+          alt="">
+        <p>Contemporánea</p>
+      </div>
+    </div>
+    <div id="current-card" class="card" name="current">
+      <div>
+        <img class="form-icon"
+          src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/39766fdcfee5167102c0eb3d1d613cce/actual-icon.svg"
+          alt="">
+        <p>Actual</p>
+      </div>
     </div>
   </div>
   <div id="4-card" class="card-container hidden">
     <div id="rating-cards" class="cards">
-      <div id="mala-card" class="card" name="mala">Bodrio</div>
-      <div id="normal-card" class="card" name="normal">Normalilla</div>
-      <div id="top-card" class="card" name="top">La hostia</div>
+      <div id="mala-card" class="card" name="mala">
+        <div>
+          <img class="form-icon"
+            src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/00b27ff281fac53d84f4dda8676f8e19/normalita-icon.svg"
+            alt="">
+          <p>Normalilla</p>
+        </div>
+      </div>
+      <div id="normal-card" class="card" name="normal">
+        <div>
+          <img class="form-icon"
+            src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/56b88acd3e730f048d24fa3385d47d83/okay-icon.svg"
+            alt="">
+          <p>Okay</p>
+        </div>
+      </div>
+      <div id="top-card" class="card" name="top">
+        <div>
+          <img class="form-icon"
+            src="https://trello-attachments.s3.amazonaws.com/5dd7bc68e7330e877ca6f2f8/5ddfab84fe042f2382e7e88f/bf44cf3c01b835593c0ca4da83b36c7c/peliculon-icon.svg"
+            alt="">
+          <p>Super</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -41,32 +100,32 @@
   </form>
   <div id="reveal-movie-container" class="hidden">
     <div id="reveal-movie-cover">
-    <div id="reveal-movie">
-      <div id="reveal-movie-img">
-        <img id="poster" src="" alt="not-found">
-      </div>
-      <div id="reveal-movie-info">
-        <div id="info-container">
-          <h3 id="title-movie"></h3><span id="year-movie"></span>
-          <br>
-          <br>
-          <p id="overview-movie"></p>
+      <div id="reveal-movie">
+        <div id="reveal-movie-img">
+          <img id="poster" src="" alt="not-found">
         </div>
-        <div id="reveal-other-info">
-          <p id="genre-movie"></p>
-          <p id="rate-movie"></p>
-        </div>
-        <div>
-          <br>
-          <br>
+        <div id="reveal-movie-info">
+          <div id="info-container">
+            <h3 id="title-movie"></h3><span id="year-movie"></span>
+            <br>
+            <br>
+            <p id="overview-movie"></p>
+          </div>
+          <div id="reveal-other-info">
+            <p id="genre-movie"></p>
+            <p id="rate-movie"></p>
+          </div>
           <div>
-          <button id="btn-1" type="submit" form="printMovie">Watch Later</button>
-          <button id="btn-2" type="submit" form="printMovie">Add to Fav. List</button>
-          <button id="btn-3" type="submit" form="printMovie">Burn it!</button>
+            <br>
+            <br>
+            <div>
+              <button id="btn-1" type="submit" form="printMovie">Watch Later</button>
+              <button id="btn-2" type="submit" form="printMovie">Add to Fav. List</button>
+              <button id="btn-3" type="submit" form="printMovie">Burn it!</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </div>

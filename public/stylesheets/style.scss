@@ -190,6 +190,11 @@ span {
   flex-direction: column;
 }
 
+.form-icon {
+  
+  width: 50px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -201,11 +206,11 @@ span {
   justify-content: center;
   align-items: center;
   background: #fc5c4c;
-  width: 20vw;
-  height: 20vh;
+  width: 30vw;
+  height: 23vh;
   border-radius: 10px;
-  margin-bottom: 5vw;
-  margin-right: 5vw;
+  margin-bottom: 1.5vw;
+  margin-right: 1.5vw;
   font-size: 40px;
   text-align: center;
   color: whitesmoke;
