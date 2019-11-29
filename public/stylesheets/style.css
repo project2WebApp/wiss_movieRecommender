@@ -99,7 +99,9 @@ a {
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 2px 10px black; }
 
 .nav-bar {
   display: flex;
@@ -126,8 +128,10 @@ a {
 .pop-up {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-around;
+  align-items: center;
+  width: 15vw;
+  height: 20vh; }
 
 .btn-nav {
   font-size: 2.5rem; }
@@ -159,6 +163,10 @@ a {
   color: #fc5c4c;
   transition: 0.2s; }
 
+.nav-log {
+  border-radius: 16px;
+  padding: 10px; }
+
 .footer {
   widows: 100vw;
   height: 200px;
@@ -174,7 +182,8 @@ h3 {
 
 .loginIcon {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  box-sizing: border-box; }
 
 .loginIcon img {
   margin-right: 2rem;
@@ -189,7 +198,6 @@ h2 {
   color: #fc5c4c; }
 
 .home {
-  display: flex;
   margin-left: 2rem;
   display: flex;
   justify-content: center;
@@ -204,22 +212,50 @@ h2 {
   margin-bottom: 200px;
   padding: 40px; }
 
-.crop {
-  flex-direction: column;
+.setting-view {
+  width: 50%;
+  height: 98%; }
+
+.main-info {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+
+.btn-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fc5c4c;
+  width: 40vw;
+  height: 15vh;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke;
+  transition: 0.2s; }
+
+.btn-index:hover {
+  background: whitesmoke;
+  color: #fc5c4c;
+  border: 2px solid #fc5c4c;
+  box-sizing: border-box;
+  font-size: 30px; }
+
+.crop {
+  display: flex;
+  align-items: center;
   width: 100vw;
-  height: 1000px;
+  height: 100vh;
   background-size: cover;
   background-image: url("https://res.cloudinary.com/dexfqvxax/image/upload/v1574768391/sources/ironman3_wzt4oq.png"); }
 
 .text-presentation {
-  margin-bottom: 20px;
-  margin-right: 500px;
   height: 300px;
   width: 700px;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 5vh;
+  border-radius: 10px; }
 
 .text-presentation p {
   margin: 20px;
@@ -387,6 +423,13 @@ span {
 .hidden {
   display: none; }
 
+.list-container {
+  margin-top: 7vh; }
+
+.ml-container {
+  display: flex;
+  cursor: pointer; }
+
 #mylist-later {
   width: 85%; }
 
@@ -403,33 +446,16 @@ span {
   transform: scale(1.1);
   transition: 0.2s; }
 
-#btn-later {
-  background-color: transparent;
-  border: none;
+.btn-mylist {
+  box-sizing: content-box;
   font-size: 20px;
-  margin: 30px;
-  border-radius: 25px;
-  padding: 20px;
-  width: 200px;
+  margin: 50px;
+  padding: 5px;
+  width: 120px;
   height: 20px; }
 
-#btn-later:active {
-  border-bottom: 2px solid #fc5c4c;
-  border-radius: 0%; }
-
-#btn-fav {
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  margin: 30px;
-  border-radius: 25px;
-  padding: 20px;
-  width: 200px;
-  height: 20px; }
-
-#btn-fav:active {
-  border-bottom: 2px solid #fc5c4c;
-  border-radius: 0%; }
+.line-active {
+  border-bottom: 2px solid #fc5c4c; }
 
 body {
   height: 80vh;

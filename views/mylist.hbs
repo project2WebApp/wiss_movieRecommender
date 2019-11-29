@@ -1,23 +1,21 @@
+<div class="list-container">
+  <div class="ml-container">
+    <div id="btn-later" class="btn-mylist line-active">Watch Later</div>
+    <div id="btn-fav" class="btn-mylist">My Fav's</div>
+  </div>
+  <div id="mylist-later" class="">
+    {{#each user.listWatchLater}}
 
-<div>
-  <button id="btn-later">Watch Later</button>
-  <button id="btn-fav">My Fav's</button>
+    <img class="mylist-img" src="{{imgPath}}" alt="foto pelicula">
+
+
+    {{/each}}
+  </div>
+  <div id="mylist-fav" class="hidden">
+    {{#each user.listFavs}}
+
+    <img class="mylist-img" src="{{imgPath}}" alt="foto pelicula">
+
+    {{/each}}
+  </div>
 </div>
-<div id="mylist-later" class="">
-{{#each user.listWatchLater}}
-
-<img class = "mylist-img" src="{{imgPath}}" alt="foto pelicula">
-
-
-{{/each}}
-</div>
-<div id="mylist-fav" class="hidden">
-{{#each user.listFavs}}
-
-<img class = "mylist-img" src="{{imgPath}}" alt="foto pelicula">
-
-{{/each}}
-</div>
-
-
-
