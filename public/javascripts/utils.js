@@ -178,7 +178,7 @@ function convertGenre(genreID) {
 function randomMovieOrTv(stockData) {
   let page = getRandomInt(stockData.page, stockData.total_pages);
   stockData.page = page;
-  let result = getRandomInt(0, 19);
+  let result = getRandomInt(0, stockData.results.length);
 
   return stockData.results[result];
 }

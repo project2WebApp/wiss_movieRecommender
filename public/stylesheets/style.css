@@ -111,7 +111,11 @@ a {
   height: 5vh; }
 
 .imgLogo {
-  width: 13rem; }
+  width: 13rem;
+  transition: 0.2s; }
+
+.imgLogo:hover {
+  transform: scale(1.06); }
 
 .pop-container {
   position: fixed;
@@ -121,7 +125,7 @@ a {
   bottom: 0;
   z-index: 1;
   width: 15vw;
-  height: 20vh;
+  height: 11vh;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.8); }
 
@@ -131,7 +135,7 @@ a {
   justify-content: space-around;
   align-items: center;
   width: 15vw;
-  height: 20vh; }
+  height: 11vh; }
 
 .btn-nav {
   font-size: 2.5rem; }
@@ -141,6 +145,7 @@ a {
 
 .btn-nav-hover:hover {
   color: #fc5c4c;
+  cursor: pointer;
   transition: 0.2s; }
 
 #logo {
@@ -204,6 +209,9 @@ h2 {
   align-items: center;
   margin-top: 5px; }
 
+#recom-img {
+  width: 40px; }
+
 .movieFinder {
   background-color: #fc5c4c;
   width: 600px;
@@ -251,7 +259,7 @@ h2 {
   background-image: url("https://res.cloudinary.com/dexfqvxax/image/upload/v1574768391/sources/ironman3_wzt4oq.png"); }
 
 .text-presentation {
-  height: 300px;
+  height: 240px;
   width: 700px;
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 5vh;
@@ -304,13 +312,18 @@ span {
   color: whitesmoke;
   transition: 0.2s; }
 
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05); }
+
 #reveal-movie-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
   width: 100vw;
-  height: 85vh; }
+  height: 85vh;
+  box-sizing: content-box; }
 
 #reveal-movie-container.hidden {
   display: none; }
@@ -346,7 +359,8 @@ span {
 #reveal-movie-info {
   width: 70%;
   height: 100%;
-  border-radius: 20px; }
+  border-radius: 20px;
+  font-size: 1.6rem; }
 
 #info-container {
   display: flex;
@@ -370,6 +384,23 @@ span {
   justify-content: space-between;
   color: white;
   margin: 4vh 2vw; }
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0; }
+
+.img-btn {
+  width: 30px;
+  margin-right: 10px; }
+
+.img-btn:first-child {
+  margin-left: 20px; }
 
 .footer {
   width: 100vw;
